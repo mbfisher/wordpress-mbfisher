@@ -1,0 +1,59 @@
+$avatar-size: 270;
+
+#home header {
+  padding: 128px 0;
+
+  .home__who {
+    padding: 60px 12px;
+    height: #{$avatar-size}px;
+    box-sizing: border-box;
+
+    h1, h2 {
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.avatar {
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+  img {
+    @media (min-width: 768px) {
+      float: right;
+    }
+    background-image: url(http://www.gravatar.com/avatar/3cec7764e69f16c6cb881b51f25ce536?s=#{$avatar-size});
+    width: #{$avatar-size}px;
+    height: #{$avatar-size}px;
+
+    &.avatar--circle {
+      border-radius: #{$avatar-size / 2}px;
+    }
+  }
+}
+
+.panel-skill {
+  .panel-heading {
+    text-align: center;
+  }
+
+  .panel-body {
+    height: 240px;
+  }
+
+  .panel-footer {
+    height: 90px;
+  }
+
+  &.panel-skill--php .panel-body {
+    background: url(https://getcomposer.org/img/logo-composer-transparent.png) center/50% no-repeat;
+  }
+
+  &.panel-skill--data .panel-body {
+    background: url(https://cdn.mxpnl.com/cache/f67735c42ab9a36b4e7249d55cbb8ac5/images/static/logo_gray_117px.png) 100px 42px no-repeat,
+                url(https://web-assets.domo.com/blog/wp-content/uploads/2014/08/connector-google-analytics-logo.png) 90px 12px no-repeat;
+  }
+}
